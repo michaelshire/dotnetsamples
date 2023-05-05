@@ -25,14 +25,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - name: checkout branch
-      uses: actions/checkout@v3
-
-    - name: Build
-      uses: microsoft/setup-msbuild@v1.0.2
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '4.8.x'
-      env: 
-        DOTNET_INSTALL_DIR: '/usr/share/dotnet'
-    - name: Execute dotnet
+    - name: Build
       run: dotnet build
