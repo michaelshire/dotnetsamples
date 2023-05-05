@@ -23,13 +23,13 @@ env:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: checkout branch
       uses: actions/checkout@v3
 
     - name: Build
-      uses: actions/setup-dotnet@v3
+      uses: microsoft/setup-msbuild@v1.0.2
       with:
         dotnet-version: '4.8.x'
       env: 
