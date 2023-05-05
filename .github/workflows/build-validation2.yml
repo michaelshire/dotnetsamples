@@ -33,6 +33,6 @@ jobs:
       with:
         dotnet-version: '4.8.x'
       env: 
-        DOTNET_INSTALL_DIR: '%LocalAppData%/Microsoft/dotnet'
+        DOTNET_INSTALL_DIR: '/usr/share/dotnet'
     - name: Execute dotnet
       run: dotnet build
